@@ -1,0 +1,82 @@
+/*THIS TARGETS THE BODY AND HTML*/
+body, html {
+	height: 100%;
+	margin: 0;
+	font-size: 16px;
+	font-family: "Lato", sans-serif;
+	font-weight: 400;
+	line-height: 1.8m;
+	color: #555;
+}
+
+/*WE ARE TARGETING EVERY IMG HERE BECASUE WE WANT TO GIVE THE SCROLLING EFFECT TO ALL OF THEM*/
+.pimg1, .pimg2, .pimg3 {
+	position: relative;
+	opacity: 0.70;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+/*THIS IS WHAT IS GIVING THE PARALLAX EFFECT TO THE PAGE, DEVTERMS FIXED = PARLLAX, SCROLL=NORMAL*/
+	background-attachment: fixed;
+}
+
+.pimg1 {
+	background-image: url('../img/image1.jpeg'); /*WE ARE USING ../ BECAUSE WE WANT TO GO OUT OUR CSS FOLDER & THE INTO OUR IMG FOLDER*/
+	min-height: 100%;
+}
+
+.pimg2 {
+	background-image: url('../img/image2.jpeg');
+	min-height: 400px;
+}
+
+.pimg3 {
+	background-image: url('../img/image4.jpeg');
+	min-height: 400px;
+}
+
+.section {
+	text-align: center;
+	padding: 50px 80px;
+}
+
+.section-light {
+	background-color: #f4f4f4;
+	color: #777;
+}
+
+.section-dark {
+	background-color: #282e34;
+	color: #ddd;
+}
+
+.ptext {
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	text-align: center;
+	color: #000;
+	font-size: 27px;
+	letter-spacing: 8px;
+	text-transform: uppercase;
+}
+
+/*WE PUT THE PTEXT TO SPECIFY WHAT BORDER CLASS WE WANT, THAT IS IF THERE ARE OTHER BORDER CLASSES*/
+.ptext .border {
+	background-color: #111;
+	color: white;
+	padding: 20px;
+	border-radius: 3px;
+}
+
+/*WE DID THIIS TO DEMONSTRATE THAT WE ARE ABLE TO TAKE OFF THE BACKGROUND (THAT WE IMPLEMTED ON ABOVE) ON SPECIFIED ELEMENTS*/
+.ptext .border.trans {
+	background-color: transparent;
+}
+
+@media (max-width: 568px) {
+	.pimg1, .pimg2, .pimg3 {
+		background-attachment: scroll;
+	}
+}
